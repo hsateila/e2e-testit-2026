@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Cypress-generated output
+cypress/downloads/
+cypress/screenshots/
+cypress/videos/
+
+# Local environment and operating-system files
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
