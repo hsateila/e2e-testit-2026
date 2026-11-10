@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+/// <reference types="cypress" />
 
 describe('Testataan wikipediaa', () => {
   it('clicks type and shows the right headings', () => {
