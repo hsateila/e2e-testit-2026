@@ -11,6 +11,10 @@ permissions:
 jobs:
   cypress:
     runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: ['22', '24']
 
     steps:
       - name: Check out repository
@@ -19,7 +23,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: '24'
+          node-version: ${{ matrix.node-version }}
 
       - name: Run Cypress tests
         uses: cypress-io/github-action@v7
